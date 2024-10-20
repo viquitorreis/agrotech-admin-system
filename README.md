@@ -3,7 +3,7 @@
 [Arquitetura do projeto](#arquitetura-do-projeto)
 
 [Arquivos em C](#arquivos-c)
-- [Modos de abertura](#modos-de-abertura-de-arquivos)
+- [Modos de abertura](#modos-abertura)
 - [Funções nativas](#arquivos-funcoes-nativas)
 
 ## Arquitetura do projeto <a id="arquitetura-do-projeto"></a>
