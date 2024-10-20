@@ -125,16 +125,6 @@ Funções: ```fseek()``` ou ```rewind()```
 Exemplo:
 
 ```c
-
-```
-
-#### Fechando o arquivo
-
-Funções: ```fclose()```
-
-Exemplo:
-
-```c
 #include <stdio.h>
 
 int main() {
@@ -177,4 +167,26 @@ int main() {
     fclose(fptr);
     return 0;
 }
+```
+
+#### Fechando o arquivo
+
+Funções: ```fclose()```
+
+Exemplo:
+
+```c
+#include <stdio.h>
+
+int main() {
+    FILE *fptr = fopen("example.txt", "r");
+
+    if (fptr != NULL) {
+        fclose(fptr);
+        printf("Arquivo fechado com sucesso.\n");
+    }
+
+    return 0;
+}
+
 ```
