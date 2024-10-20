@@ -52,9 +52,9 @@ unsigned int getLastProductID() {
     char line[100];
     unsigned int lastID = 0;
 
-    // pega a linha no arquivo, até o fim dele
+    // pega a linha no arquivo, a cada iteração, até o fim dele
     while (fgets(line, sizeof(line), fptr)) {
-        // strstr vai buscar a substring productName dentro de line (checa se existe o produto na linha)
+        // strstr vai buscar a substring que tenha 'id:'
         if (strstr(line, "id:") != NULL) {
             // passando o número da ID depois de "id:"
             sscanf(line, "id: %u", &lastID);
