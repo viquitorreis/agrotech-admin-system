@@ -168,7 +168,7 @@ int validateProductHelper(Produto produto) {
     return 1;
 }
 
-int checkProductExistsByIDHelper(IDProduto code) {
+int checkProductExistsByIDHelper(IDProduto productID) {
     FILE *fptr = OPEN_FILE_HELPER(productStoreFilePath, "r");
     if (fptr == NULL) {
         fclose(fptr);
@@ -182,7 +182,7 @@ int checkProductExistsByIDHelper(IDProduto code) {
         sscanf(line, "ID: %[^,]", id);
 
         // ID existe
-        if (strcmp(id, code) == 0) {
+        if (strcmp(id, productID) == 0) {
             fclose(fptr);
             return 1;
         }

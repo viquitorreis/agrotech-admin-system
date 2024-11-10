@@ -59,10 +59,10 @@ void createProduct() {
 
     if (productsCount < MAX_PRODUTOS) {
         Produto novoProduto;
-        char code[3];
-        sprintf(code, "%d", newProductIDHelper());
+        char productID[3];
+        sprintf(productID, "%d", newProductIDHelper());
 
-        strcpy(novoProduto.ID, code);
+        strcpy(novoProduto.ID, productID);
 
         if (checkProductExistsByIDHelper(novoProduto.ID)) {
             printf("Produto ja cadastrado.");
@@ -93,7 +93,7 @@ void createProduct() {
     }
 }
 
-int readProductByCode(IDProduto code) {
+int readProductByID(IDProduto productID) {
     FILE *fptr = OPEN_FILE_HELPER(productStoreFilePath, "r");
     if (fptr == NULL) {
         fclose(fptr);
@@ -101,9 +101,13 @@ int readProductByCode(IDProduto code) {
     }
 
     char line[1000];
+    char id[10];
     while (fgets(line, sizeof(line), fptr)) {
-        // checa se na linha contém o código especificado
-        if (strstr(line, code) != NULL) {
+        // le ID do produto até a vírgula
+        sscanf(line, "ID: %[^,]", id);
+
+        // ID existe
+        if (strcmp(id, productID) == 0) {
             printf("%s", line);
             fclose(fptr);
             return 1;
@@ -116,11 +120,11 @@ int readProductByCode(IDProduto code) {
 }
 
 void readProduct() {
-    char code[3];
-    printf("Digite o codigo do produto: ");
-    scanf("%s", code);
+    char productID[3];
+    printf("Digite a ID do produto: ");
+    scanf("%s", productID);
 
-    readProductByCode(code);    
+    readProductByID(productID);    
 }
 
 void readProducts() {
