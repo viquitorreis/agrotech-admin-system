@@ -150,16 +150,11 @@ char *validateCPFHelper(char cpf[15]) {
     cpfTemporario[subIndex] = '\0';
 
     if (strlen(cpfTemporario) != 11) {
-        printf("CPF invalido!\n");
         free(cpfFormatado);
         return NULL;
     }
 
-    sprintf(cpfFormatado, "%c%c%c.%c%c%c.%c%c%c-%c%c",
-        cpfTemporario[0], cpfTemporario[1], cpfTemporario[2],
-        cpfTemporario[3], cpfTemporario[4], cpfTemporario[5],
-        cpfTemporario[6], cpfTemporario[7], cpfTemporario[8],
-        cpfTemporario[9], cpfTemporario[10]
+    sprintf(cpfFormatado, "%s", cpfTemporario
     );
 
     return cpfFormatado;

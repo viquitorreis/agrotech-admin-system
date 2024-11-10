@@ -20,6 +20,14 @@ Vai compilar e rodar o arquivo dentro da dist `bin`
 
 ## Arquitetura do projeto <a id="arquitetura-do-projeto"></a>
 
+### bin
+
+Folder onde o binário compilado está
+
+### main.c
+
+Arquivo do bootstrap do sistema
+
 ### db
 
 Folder com as informações armazenadas do sistema
@@ -40,7 +48,7 @@ Folder com as informações armazenadas do sistema
 
 Armazena as vendas do sistema
 
-### helpers.h
+### helpers
 
 Folder com as estruturas e funções auxiliares do sistema.
 
@@ -67,10 +75,6 @@ Folder com a lógica de negócio do sistema.
 * sale.c
 
     Lógica de negócio relativo a venda
-
-### write.c
-
-Arquivo com as operações de **escrita** da lógica de negócio (produtos e etc)
 
 ## Arquivos em C <a id="arquivos-c"></a>
 

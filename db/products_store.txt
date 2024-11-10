@@ -47,5 +47,5 @@ ID: 73, name: Product2, description: Description2,
 ID: 74, name: Product1, description: Description1,
 ID: 75, name: Product2, description: Description2,
 ID: 76, descricao: Produto 10, quantidade: 0, preco: 50.00
-
-
+ID: 77, descricao: desc 2, quantidade: 60, preco: 50.00
+ID: 78, descricao: desc 60, quantidade: 80, preco: 900.00

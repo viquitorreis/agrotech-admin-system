@@ -77,6 +77,11 @@ void createProduct() {
 
         printf("Digite o preco da unidade desse produto: ");
         scanf("%f", &novoProduto.precoUnitario);
+
+        if (!validateProductHelper(novoProduto)) {
+            printf("Produto invalido! Especifique descrição, quantidade e preco da unidade corretamente\n");
+            return;
+        }
         
         if (insertProduct(novoProduto)) {
             printf("Produto cadastrado com sucesso!\n");

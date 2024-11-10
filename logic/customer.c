@@ -38,6 +38,16 @@ void createCustomer() {
         printf("Digite o CPF do cliente (apenas numeros): ");
         scanf("%s", newCustomer.cpf);
 
+        char *validatedCPF = validateCPFHelper(newCustomer.cpf);
+        if (validatedCPF == NULL) {
+            printf("CPF invalido!\n");
+            return;
+        }
+        strcpy(newCustomer.cpf, validatedCPF);
+        free(validatedCPF);
+
+        printf("CPF: %s\n", newCustomer.cpf);
+
         if (checkCustomerExistsByCPFHelper(newCustomer.cpf)) {
             printf("CPF ja cadastrado!\n");
             return;
@@ -52,6 +62,7 @@ void createCustomer() {
         printf("Dados de endereco:\n");
         printf("Rua: "); scanf(" %[^\n]", newCustomer.endereco.rua);
         printf("Numero: "); scanf("%d", &newCustomer.endereco.numero);
+        setbuf(stdin, NULL);
         printf("Cidade: "); scanf(" %[^\n]", newCustomer.endereco.cidade);
         printf("Estado: "); scanf(" %[^\n]", newCustomer.endereco.estado);
 
