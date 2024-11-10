@@ -1,0 +1,9 @@
+cpfCliente: 130, ID do produto: 76, quantidadeComprada: 30
+cpfCliente: 130, ID do produto: 76, quantidadeComprada: 15
+cpfCliente: 130, ID do produto: 76, quantidadeComprada: 30
+cpfCliente: 130, ID do produto: 76, quantidadeComprada: 30
+cpfCliente: 130, ID do produto: 76, quantidadeComprada: 30
+cpfCliente: 130, ID do produto: 76, quantidadeComprada: 30
+cpfCliente: 130, ID do produto: 76, quantidadeComprada: 30
+cpfCliente: 130, ID do produto: 76, quantidadeComprada: 30
+cpfCliente: 130, ID do produto: 76, quantidadeComprada: 10

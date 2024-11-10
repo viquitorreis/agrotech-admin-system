@@ -1,10 +1,22 @@
 # Visão geral - Sistema administrativo em C, com escrita e leitura de arquivos
 
+[Uso](#como-usar)
+
 [Arquitetura do projeto](#arquitetura-do-projeto)
 
 [Arquivos em C](#arquivos-c)
 - [Modos de abertura](#modos-abertura)
 - [Funções nativas](#arquivos-funcoes-nativas)
+
+## Como usar <a id="como-usar"></a>
+
+Basta rodar o seguinte comando no terminal:
+
+```bash
+make run
+```
+
+Vai compilar e rodar o arquivo dentro da dist `bin`
 
 ## Arquitetura do projeto <a id="arquitetura-do-projeto"></a>
 
@@ -12,15 +24,49 @@
 
 Folder com as informações armazenadas do sistema
 
+* customer_store.txt
+
+    Clientes do sistema
+
+* last_product_id.txt
+
+    Armazena a ID do último produto
+
+* products_store.txt
+
+    Armazena os produtos cadastrados
+
+* sale_store.txt
+
+Armazena as vendas do sistema
+
 ### helpers.h
 
-- Variáveis globais (path para os arquivos de armazenamento)
-- Structs usadas no projeto
+Folder com as estruturas e funções auxiliares do sistema.
+
+- Variáveis globais (path para os arquivos de armazenamento - folder db)
 - Funções helpers de uso geral
+- types.h - Structs / tipos usados no projeto
 
-### read.c
+### logic
 
-Arquivo com as operações de **leitura** da lógica de negócio (produtos e etc)
+Folder com a lógica de negócio do sistema.
+
+* customer.c
+    
+    Lógica de negócio do cliente
+
+* menu.c
+
+    Menu com as opções do usuário
+
+* product.
+
+    Lógica de negócio relativo ao produto
+
+* sale.c
+
+    Lógica de negócio relativo a venda
 
 ### write.c
 
